@@ -1,7 +1,7 @@
 # Output directory containing the formatted manuscript
 
 The [`gh-pages`](https://github.com/Akshay163/gp13_food_flow/tree/gh-pages) branch hosts the contents of this directory at <https://Akshay163.github.io/gp13_food_flow/>.
-The permalink for this webpage version is <https://Akshay163.github.io/gp13_food_flow/v/b5f93e5abb03603f7dc0f8e7caa6c81bf8b9879e/>.
+The permalink for this webpage version is <https://Akshay163.github.io/gp13_food_flow/v/423991f15dd137d766c9f878afcc121aaf921eb6/>.
 To redirect to the permalink for the latest manuscript version at anytime, use the link <https://Akshay163.github.io/gp13_food_flow/v/freeze/>.
 
 ## Files
@@ -35,4 +35,4 @@ Verifying timestamps with the `ots verify` command requires running a local bitc
 ## Source
 
 The manuscripts in this directory were built from
-[`b5f93e5abb03603f7dc0f8e7caa6c81bf8b9879e`](https://github.com/Akshay163/gp13_food_flow/commit/b5f93e5abb03603f7dc0f8e7caa6c81bf8b9879e).
+[`423991f15dd137d766c9f878afcc121aaf921eb6`](https://github.com/Akshay163/gp13_food_flow/commit/423991f15dd137d766c9f878afcc121aaf921eb6).
