@@ -1,6 +1,5 @@
 dataset
 datasets
-existance
 FAF
 Gopinath
 GSUA
@@ -14,8 +13,6 @@ Munisamy
 Munisamy’s
 perceptron
 PPML
-qualititive
-quanlititive
 regressor
 SCTG
 SGD
