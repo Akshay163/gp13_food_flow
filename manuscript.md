@@ -67,11 +67,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://Akshay163.github.io/gp13_food_flow/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://Akshay163.github.io/gp13_food_flow/v/0489f5a807f2bc4f6f5bb49614d92e402e998e79/" />
+  <link rel="alternate" type="text/html" href="https://Akshay163.github.io/gp13_food_flow/v/da47fd34ff0bec6fe022a8c34a7c0a8f141fede2/" />
 
-  <meta name="manubot_html_url_versioned" content="https://Akshay163.github.io/gp13_food_flow/v/0489f5a807f2bc4f6f5bb49614d92e402e998e79/" />
+  <meta name="manubot_html_url_versioned" content="https://Akshay163.github.io/gp13_food_flow/v/da47fd34ff0bec6fe022a8c34a7c0a8f141fede2/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://Akshay163.github.io/gp13_food_flow/v/0489f5a807f2bc4f6f5bb49614d92e402e998e79/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://Akshay163.github.io/gp13_food_flow/v/da47fd34ff0bec6fe022a8c34a7c0a8f141fede2/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -103,9 +103,9 @@ title: Manuscript Title
 
 <small><em>
 This manuscript
-([permalink](https://Akshay163.github.io/gp13_food_flow/v/0489f5a807f2bc4f6f5bb49614d92e402e998e79/))
+([permalink](https://Akshay163.github.io/gp13_food_flow/v/da47fd34ff0bec6fe022a8c34a7c0a8f141fede2/))
 was automatically generated
-from [Akshay163/gp13_food_flow@0489f5a](https://github.com/Akshay163/gp13_food_flow/tree/0489f5a807f2bc4f6f5bb49614d92e402e998e79)
+from [Akshay163/gp13_food_flow@da47fd3](https://github.com/Akshay163/gp13_food_flow/tree/da47fd34ff0bec6fe022a8c34a7c0a8f141fede2)
 on December 5, 2020.
 </em></small>
 
@@ -137,7 +137,7 @@ on December 5, 2020.
 
 
 ## Abstract {.page_break_before}
-United States has been a hub of bilateral trade, both internationally and domestically. In our study, we looked specifically at the food flows, i.e. the bilateral trade of food produce, on a domestic scale among its 50 states. We implemented two prevalent machine learning algorithms (Neural Networks and Random Forest) to predict the food flows. We also compared our results with one of the most sought-after models for bilateral trade, the gravity model to validate the relevance of application of machine learning models in our analysis. We find out that the random forest model is the best model out of all the three selected models with a $R^2$ score of 0.86. The gravity model performed quite poorly because of its linear nature which emphasizes the pertinence of non-linear models in food flow predictions. 
+United States has been a hub of bilateral trade, both internationally and domestically. In our study, we looked specifically at the food flows, i.e. the bilateral trade of food produce, on a domestic scale among its 50 states. We implemented two prevalent machine learning algorithms (Neural Networks and Random Forest) to predict the food flows. We also compared our results with one of the most sought-after models for bilateral trade, the gravity model to validate the relevance of application of machine learning models in our analysis. We find out that the random forest model is the best model out of all the three selected models with a $R^2$ score of 0.86 as compared to 0.43 $R^2$ score of neural networks. The gravity model performed quite poorly because of its linear nature which emphasizes the pertinence of non-linear models in food flow predictions. 
 
 
 ## Introduction and Background
@@ -155,6 +155,24 @@ The paper by Lin et al. is an extensively rigorous effort to understand the food
 
 
 
+
+
+
+
+
+## Methods
+
+
+
+
+
+## Reuslts and Discussion
+
+
+
+
+
+## Conclusion
 
 
 
