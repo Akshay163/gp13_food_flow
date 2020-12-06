@@ -4,7 +4,7 @@ author-meta:
 - Jane Roe
 bibliography:
 - content/manual-references.json
-date-meta: '2020-12-05'
+date-meta: '2020-12-06'
 header-includes: '<!--
 
   Manubot generated metadata rendered from header-includes-template.html.
@@ -23,9 +23,9 @@ header-includes: '<!--
 
   <meta property="twitter:title" content="Manuscript Title" />
 
-  <meta name="dc.date" content="2020-12-05" />
+  <meta name="dc.date" content="2020-12-06" />
 
-  <meta name="citation_publication_date" content="2020-12-05" />
+  <meta name="citation_publication_date" content="2020-12-06" />
 
   <meta name="dc.language" content="en-US" />
 
@@ -67,11 +67,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://Akshay163.github.io/gp13_food_flow/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://Akshay163.github.io/gp13_food_flow/v/da47fd34ff0bec6fe022a8c34a7c0a8f141fede2/" />
+  <link rel="alternate" type="text/html" href="https://Akshay163.github.io/gp13_food_flow/v/5fcea6d10cc6d4fb1036b32df0837ccbda47d155/" />
 
-  <meta name="manubot_html_url_versioned" content="https://Akshay163.github.io/gp13_food_flow/v/da47fd34ff0bec6fe022a8c34a7c0a8f141fede2/" />
+  <meta name="manubot_html_url_versioned" content="https://Akshay163.github.io/gp13_food_flow/v/5fcea6d10cc6d4fb1036b32df0837ccbda47d155/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://Akshay163.github.io/gp13_food_flow/v/da47fd34ff0bec6fe022a8c34a7c0a8f141fede2/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://Akshay163.github.io/gp13_food_flow/v/5fcea6d10cc6d4fb1036b32df0837ccbda47d155/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -103,10 +103,10 @@ title: Manuscript Title
 
 <small><em>
 This manuscript
-([permalink](https://Akshay163.github.io/gp13_food_flow/v/da47fd34ff0bec6fe022a8c34a7c0a8f141fede2/))
+([permalink](https://Akshay163.github.io/gp13_food_flow/v/5fcea6d10cc6d4fb1036b32df0837ccbda47d155/))
 was automatically generated
-from [Akshay163/gp13_food_flow@da47fd3](https://github.com/Akshay163/gp13_food_flow/tree/da47fd34ff0bec6fe022a8c34a7c0a8f141fede2)
-on December 5, 2020.
+from [Akshay163/gp13_food_flow@5fcea6d](https://github.com/Akshay163/gp13_food_flow/tree/5fcea6d10cc6d4fb1036b32df0837ccbda47d155)
+on December 6, 2020.
 </em></small>
 
 ## Authors
@@ -162,6 +162,53 @@ The paper by Lin et al. is an extensively rigorous effort to understand the food
 
 ## Methods
 
+In our study, we used two different machine learning algorithms to predict the food flows between 50 states in the US. To achieve this, our group utilized separate Exploratory data analyses and data preprocessing techniques that are different from one another. In this section, those two different approaches are explained in detail. First let’s have a look at the data sources.
+
+### Data sources
+
+We used diverse data sources to obtain data for major years and those years are 1997, 2002, 2007, 2012 and 2017. Those data sources are described briefly below.
+
+Bilateral Trade: We obtain data on agricultural and food commodity transfers between FAF zones in the United States. The Freight Analysis Framework Version 4 (FAF4) database provides empirical agricultural and food commodity transfers between FAF zones for the year 2012(Oak Ridge National Laboratory 2015). Second, we obtain statistical information on economic production within each US county.
+
+Production: We used United States Department of Agriculture (USDA) data to determine state level production values for 10 selected food and crop categories in accordance with SCTG categorization, namely corn, dairy, honey, milk, oats, rice, rye, wheat, aquaculture and sorghum. The value is measured in tons.
+
+Distance: To calculate the distance between states, we used the latitude and longitude data and used the haversine formula.
+
+Income and GDP: We obtained economic data, i.e. income and GDP data from Bureau of Economic Analysis portal. For income we used income per capita values. All the values are measured in million dollars. 
+
+### Neural network
+
+### EDA
+The EDA is divided into two sections. First is Data Cleaning where we go through various key datasets and tidy them up so that they all can work together. In the second section, we will be looking at their distributions and their possible correlation between each other.
+To begin with, we load the data for food flow. The data has coded features which has relevant meaning. They are described below.
+fr: Foreign. Trade across borders. We won't be considering this data for our analysis as we are focussed on food flows among US states. 
+
+orig: Origin 
+
+dms: Domestic 
+
+dest: Destination 
+
+st: State
+
+inmode: mode of import of international flows
+
+outmode: mode of export of international flows
+
+sctg2: Food category. This is a standard code used by Bureau of Trade Statistics for classifying food [BTS Guide] 
+
+value: value of food in dollars. tons: food value in weight.  
+
+After introducing the flow data, we utilized the latitude and longitude of states to calculate the haversine distance between origin and destination of food flows. 
+Next, we introduced the remaining data from their respective files. Eventually, these data-frames were merged with once origin states and destination states to obtain the final data-frame for statistical analysis and visualization. Results of statistical analysis and visualization are presented in the results and discussion section.
+
+### Data Preprocessing
+In the exploratory data analysis, we manipulated the data to find appropriate features for the model. There are 39 features in total. In this analysis, we removed self-loops in the food flow network, i.e. the origin and destination of the domestic flows being the same. 
+Before moving towards building the neural network, we formatted the data type of different features to meet the model requirements (i.e. categorical or numerical).  To obtain categorical features, we create a function that takes the string value of the column and return the whole data-frame with a new one-hot encoded feature for the feature fed to the function. We also carefully removed some null values in many features to not lose any valuable data values. This was done by removing the features with missing percentage greater than 30%. To spot any collinearity and anomalies that might affect our results, we produced the correlation matrix and histogram of all variables (refer figures).
+Most of the crop production values are right tailed which means that we need to normalize the data before we feed it to our model. Also, we notice that the "value" feature is highly concentrated at one bin. The standard deviation for the dataset is very high and the quantile values are quite low, which suggests that we need to remove the major outliers from the dataset.
+
+### Model
+In this analysis, we used neural network to predict the food flow between US states. We used two hidden layers with 30 and 12 neurons respectively with ReLu activation function. We used Adam optimizer function with a learning rate of 0.001, "mean squared error" loss function and RMSE as the metric. Batch size of 100 was considered with a validation split of 0.2 and number of epochs equals to 25. The results of the model run are discussed in the results and discussion section.
 
 
 
